@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+            <style>.icon{
+    border: 2px solid #5383c3;
+    border-radius: 5px;
+    width: 45px;
+    height: 45px;
+	padding: 2px;
+}
+
+body {
+	font-family: 'Lucida Grande', 'Helvetica Neue', sans-serif;
+	font-size: 13px;
+    background-color: #222;
+}
+
+.container {
+	width: 100px;
+    height: 5000px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+	overflow: hidden;
+}
+
+.loader_back {
+	width: 66px;
+	height: 66px;
+	padding: 10px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	background: #000;
+	
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	
+	float: left;
+	margin: 10px;
+}
+
+.loader {
+	width: 50px;
+	height: 50px;
+	border-right: 8px solid #4D4D4D;
+	border-bottom: 8px solid #4D4D4D;
+	
+	margin: auto;
+	
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	
+	-webkit-animation: rotate 2s infinite linear;
+	-moz-animation: rotate 2s infinite linear;
+	-ms-animation: rotate 2s infinite linear;
+	animation: rotate 2s infinite linear;
+}
+
+.loader.gray {
+	border-left: 8px solid gray;
+	border-top: 8px solid gray;
+}
+
+@-webkit-keyframes rotate {
+	from {-webkit-transform: rotate(0deg);}
+	to {-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes rotate {
+	from {-webkit-transform: rotate(0deg);}
+	to {-webkit-transform: rotate(360deg);}
+}
+@-ms-keyframes rotate {
+	from {-webkit-transform: rotate(0deg);}
+	to {-webkit-transform: rotate(360deg);}
+}
+@keyframes rotate {
+	from {-webkit-transform: rotate(0deg);}
+	to {-webkit-transform: rotate(360deg);}
+}
+.d-none {
+	display: none;
+}
+
+
+
+body{
+    color: white;
+}
+.nandeyanen-link{
+    text-decoration:none;
+    color:white;
+}
+
+.bananakokuouheika-icon{
+    border: 3px solid #5383c3;
+    border-radius: 5px;
+    width: 150px;
+    height: 150px;
+}
+
+.mailtolink-bananaking{
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 3px;
+    background-color: #5383c3;
+    position: fixed;
+    bottom: 40px;
+    right: 8px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+.mailtolink-nandeyanen{
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 3px;
+    background-color: #5383c3;
+    position: fixed;
+    bottom: 8px;
+    right: 8px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+
+
+.icon{
+    border: 2px solid #5383c3;
+    border-radius: 5px;
+    width: 45px;
+    height: 45px;
+	padding: 2px;
+}
+.list{
+  color:white;
+  text-decoration: none;
+}
+.header-area{
+  display: flex;
+  justify-content: space-between;
+  height: 65px;
+  padding: 0 20px;
+  align-items: center;
+}
+.hamburger{
+  width: 40px;
+  height: 25px;
+  position: relative;
+}
+.hamburger span{
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: blue;
+  transition: .5s;/* 追記 */
+}
+.hamburger span:first-of-type{/* ハンバーガーメニューの1番目の線 */
+  top: 0;
+}
+.hamburger span:nth-of-type(2){/* ハンバーガーメニューの2番目の線 */
+  top: 50%;
+}
+.hamburger span:last-of-type{/* ハンバーガーメニューの3番目の線 */
+  top: 100%;
+}
+.slide-menu{
+  background-color: rgba(0, 0, 0, .8);
+  position: fixed;
+  top: 65px;
+  width: 100%;
+  left: 0;
+  transform: translateX(100%);
+  transition: .5s;/* 追記 */
+}
+.slide-menu li{
+  color: #fff;
+  line-height: 400%;
+  text-align: center;
+}
+.hamburger.active span:first-of-type{/* ハンバーガーメニューの1番目の線 */
+  top: 50%;
+  transform: rotate(45deg);
+}
+.hamburger.active span:nth-of-type(2){/* ハンバーガーメニューの2番目の線 */
+  opacity: 0;/* 透明にする */
+}
+.hamburger.active span:last-of-type{/* ハンバーガーメニューの3番目の線 */
+  top: 50%;
+  transform: rotate(-45deg);
+}
+.slide-menu.active{
+  transform: translateX(0);
+}</style>
+        </head>
+        <body>
+            
+
+    
+        <meta charset="utf-8">
+        <title>バナナ国王陛下について</title>
+    
+    
+<div class="container d-none" id="show-first">
+<div class="loader_back">
+	<div class="loader gray"></div>
+</div>
+</div>
+
+
+  <header>
+    <div class="header-area">
+    <a href="https://liveweave.com/uxbIph/demo"><img src="https://x.gd/bananakinglogo" class="icon"></a>
+      <div class="hamburger">
+        <!-- ハンバーガーメニューの線 -->
+        <span></span>
+        <span></span>
+        <span></span>
+        <!-- /ハンバーガーメニューの線 -->
+      </div>
+    </div>
+    <ul class="slide-menu">
+      <li><a href="https://liveweave.com/uxbIph/demo" class="list">Home</a></li>
+      <li><a href="https://liveweave.com/KrJ1bE/demo" class="list">アカウント一覧</a></li>
+      <li><a href="https://liveweave.com/3OiM56/demo" class="list">作成中</a></li>
+      <li><a href="https://liveweave.com/3OiM56/demo" class="list">作成中</a></li>
+    </ul>
+  </header>
+
+
+        <h1>バナナ国王陛下とは</h1>
+        <p>バナナ国王陛下とは、<a href="https://nandeyanen.ie-t.net" class="nandeyanen-link">任意団体なんでやねん</a>に雑用係として勤務している中学生です。<br>
+        <img src="https://x.gd/bananakinglogo" class="bananakokuouheika-icon">
+        </p><h1>任意団体なんでやねんとは</h1>
+        <p></p><a href="https://nandeyanen.ie-t.net" class="nandeyanen-link">任意団体なんでやねん</a>とは、大阪府の小学生4人によって立ち上げられた団体です。現在は小学生4人に加え、<ruby> 元Moon Corporationの社員ら <rp>(</rp><rt>僕は元々Moon Corporationの社員です</rt><rp>)</rp></ruby>と、中学生1名、高校生1名で活動しています。<p></p>
+        <p>任意団体なんでやねんは、<a href="https://nandeyanen.ie-t.net/talkit" class="nandeyanen-link">Talkit</a>という総合SNSサービスや、<a href="https://pagespedia.f5.si" class="nandeyanen-link">Pagespedia</a>という Wikiサイトなどを運営しており、サービスも充実しています。</p>
+        <marquee behavior="alternate">ばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばなな</marquee>
+        <a href="mailto:sei1214@ymail.ne.jp" class="mailtolink-bananaking">バナナ国王陛下にメールを送る</a>
+        <a href="mailto:info@nandeyanen.ie-t.net" class="mailtolink-nandeyanen">任意団体なんでやねんにメールを送る</a>
+            <script>const showFirst = document.getElementById("show-first");
+function switchDisplay() {
+	  showFirst.classList.add("d-none");
+}
+setTimeout(() => {
+	  switchDisplay();
+	}, 500);
+
+document.querySelector('.hamburger').addEventListener('click', function(){
+  this.classList.toggle('active');
+  document.querySelector('.slide-menu').classList.toggle('active');
+})</script>
+        
+    
+</body>
