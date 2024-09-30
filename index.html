@@ -1,7 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-            <style>.icon{
+            <style>#webShareApi {
+ background-color: blue;
+ color: white;
+ font-weight: bold;
+ font-size: 120%;
+ cursor: pointer;
+ border-radius: 3px;
+}
+
+
+.animateElement {
+  width: 100%; /* これはテスト用のサイズ指定なのでなくていいです */
+  height: fit-content; /* これはテスト用のサイズ指定なのでなくていいです */
+  background: #000; /* これはテスト用のサイズ指定なのでなくていいです */
+  -webkit-transform: translateZ(0); /* 動きを滑らかにするおまじないです。使いすぎ注意。 */
+　display: none;
+  opacity: 0px;
+  padding: 0px;
+}
+
+.animated {
+  /* アニメーションのプロパティを指定 */
+  animation-name: example;
+  animation-duration: 1s;
+  display: block;
+  opacity: 1;
+
+}
+
+@keyframes example {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+
+.icon{
     border: 2px solid #5383c3;
     border-radius: 5px;
     width: 45px;
@@ -17,7 +53,7 @@ body {
 
 .container {
 	width: 100px;
-    height: 5000px;
+    height: 1000px;
     margin-right: auto;
     margin-left: auto;
     margin-top: auto;
@@ -40,6 +76,7 @@ body {
 	
 	float: left;
 	margin: 10px;
+  position: fixed;
 }
 
 .loader {
@@ -58,11 +95,13 @@ body {
 	-moz-animation: rotate 2s infinite linear;
 	-ms-animation: rotate 2s infinite linear;
 	animation: rotate 2s infinite linear;
+  position: fixed;
 }
 
 .loader.gray {
 	border-left: 8px solid gray;
 	border-top: 8px solid gray;
+  position: fixed;
 }
 
 @-webkit-keyframes rotate {
@@ -196,12 +235,15 @@ body{
 .slide-menu.active{
   transform: translateX(0);
 }</style>
-	<meta charset="utf-8">
-        <title>バナナ国王陛下について</title>
-	<link rel="icon" href="./favicon.ico" type="image/x-icon">
         </head>
-	
-        <body>    
+        <body>
+            
+
+    
+        <meta charset="utf-8">
+        <title>バナナ国王陛下について</title>
+    
+    
 <div class="container d-none" id="show-first">
 <div class="loader_back">
 	<div class="loader gray"></div>
@@ -211,7 +253,7 @@ body{
 
   <header>
     <div class="header-area">
-    <a href="https://banana-kokuouheika.github.io/"><img src="https://x.gd/bananakinglogo" class="icon"></a>
+    <a href="https://liveweave.com/uxbIph/demo"><img src="https://x.gd/bananakinglogo" class="icon"></a>
       <div class="hamburger">
         <!-- ハンバーガーメニューの線 -->
         <span></span>
@@ -221,22 +263,27 @@ body{
       </div>
     </div>
     <ul class="slide-menu">
-      <li><a href="https://banana-kokuouheika.github.io/" class="list">Home</a></li>
-      <li><a href="https://banana-kokuouheika.github.io/account" class="list">アカウント一覧</a></li>
+      <li><a href="https://liveweave.com/uxbIph/demo" class="list">Home</a></li>
+      <li><a href="https://liveweave.com/KrJ1bE/demo" class="list">アカウント一覧</a></li>
       <li><a href="https://liveweave.com/3OiM56/demo" class="list">作成中</a></li>
       <li><a href="https://liveweave.com/3OiM56/demo" class="list">作成中</a></li>
     </ul>
   </header>
 
-
+  <div class="animateElement">  
         <h1>バナナ国王陛下とは</h1>
         <p>バナナ国王陛下とは、<a href="https://nandeyanen.ie-t.net" class="nandeyanen-link">任意団体なんでやねん</a>に雑用係として勤務している中学生です。<br>
         <img src="https://x.gd/bananakinglogo" class="bananakokuouheika-icon">
-	<p>最近は、文章をコピーされないようにするプログラムを頑張って作っています。ぜひ見てください。<a href="https://banana-kokuouheika.github.io/copy-and-paste/">開く</a></p>
-        </p><h1>任意団体なんでやねんとは</h1>
+      </p>
+	  <p>最近は、文章をコピーされないようにするプログラムを頑張って作っています。ぜひ見てください。<a href="https://banana-kokuouheika.github.io/copy-and-paste/">開く</a></p>
+  </div>
+  <div class="animateElement">  
+        <h1>任意団体なんでやねんとは</h1>
         <p></p><a href="https://nandeyanen.ie-t.net" class="nandeyanen-link">任意団体なんでやねん</a>とは、大阪府の小学生4人によって立ち上げられた団体です。現在は小学生4人に加え、<ruby> 元Moon Corporationの社員ら <rp>(</rp><rt>僕は元々Moon Corporationの社員です</rt><rp>)</rp></ruby>と、中学生1名、高校生1名で活動しています。<p></p>
         <p>任意団体なんでやねんは、<a href="https://nandeyanen.ie-t.net/talkit" class="nandeyanen-link">Talkit</a>という総合SNSサービスや、<a href="https://pagespedia.f5.si" class="nandeyanen-link">Pagespedia</a>という Wikiサイトなどを運営しており、サービスも充実しています。</p>
-        <marquee behavior="alternate">ばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばななばなな</marquee>
+</div>
+
+        <button id="webShareApi">ページを共有</button>
         <a href="mailto:sei1214@ymail.ne.jp" class="mailtolink-bananaking">バナナ国王陛下にメールを送る</a>
         <a href="mailto:info@nandeyanen.ie-t.net" class="mailtolink-nandeyanen">任意団体なんでやねんにメールを送る</a>
             <script>const showFirst = document.getElementById("show-first");
@@ -250,7 +297,45 @@ setTimeout(() => {
 document.querySelector('.hamburger').addEventListener('click', function(){
   this.classList.toggle('active');
   document.querySelector('.slide-menu').classList.toggle('active');
-})</script>
+})
+
+function OnButtonClick() {
+navigator.share(data)
+}
+
+
+
+const shareButton = document.getElementById('webShareApi');
+shareButton.addEventListener('click', async () => {
+    try {
+        await navigator.share(
+            {
+                title: document.title,
+                url: "https://liveweave.com/uxbIph/demo"
+            });
+    } catch (error) {
+        console.error(error);
+    }
+});
+
+
+window.addEventListener("scroll", function () {
+  // アニメーションを実行したいエレメントを取得
+  const elements = document.getElementsByClassName("animateElement");
+
+  // 複数のエレメントに対して、アニメーションを実行する
+  Array.prototype.forEach.call(elements, function (element) {
+    // ウィンドウの上端とエレメントの上端の距離を取得
+    const elementTop = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    // アニメーションの条件をチェック
+    if (elementTop - windowHeight <= 0) {
+      // アニメーションを実行するためのコードをここに記述
+      element.classList.add("animated");
+    }
+  });
+});</script>
         
     
 </body>
