@@ -1,7 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-            <style>#webShareApi {
+<style>.list{
+  color:white;
+  text-decoration: none;
+}
+.header-area{
+  display: flex;
+  justify-content: space-between;
+  height: 65px;
+  padding: 0 20px;
+  align-items: center;
+}
+.hamburger{
+  width: 40px;
+  height: 25px;
+  position: relative;
+}
+.hamburger span{
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: blue;
+  transition: .5s;/* 追記 */
+}
+.hamburger span:first-of-type{/* ハンバーガーメニューの1番目の線 */
+  top: 0;
+}
+.hamburger span:nth-of-type(2){/* ハンバーガーメニューの2番目の線 */
+  top: 50%;
+}
+.hamburger span:last-of-type{/* ハンバーガーメニューの3番目の線 */
+  top: 100%;
+}
+.slide-menu{
+  background-color: rgba(0, 0, 0, .8);
+  position: fixed;
+  top: 65px;
+  width: 100%;
+  left: 0;
+  transform: translateX(100%);
+  transition: .5s;/* 追記 */
+}
+.slide-menu li{
+  color: #fff;
+  line-height: 400%;
+  text-align: center;
+}
+.hamburger.active span:first-of-type{/* ハンバーガーメニューの1番目の線 */
+  top: 50%;
+  transform: rotate(45deg);
+}
+.hamburger.active span:nth-of-type(2){/* ハンバーガーメニューの2番目の線 */
+  opacity: 0;/* 透明にする */
+}
+.hamburger.active span:last-of-type{/* ハンバーガーメニューの3番目の線 */
+  top: 50%;
+  transform: rotate(-45deg);
+}
+.slide-menu.active{
+  transform: translateX(0);
+}
+
+
+
+#webShareApi {
  background-color: blue;
  color: white;
  font-weight: bold;
@@ -12,9 +75,8 @@
 
 
 .animateElement {
-  width: 100%; /* これはテスト用のサイズ指定なのでなくていいです */
+  width: fit-content; /* これはテスト用のサイズ指定なのでなくていいです */
   height: fit-content; /* これはテスト用のサイズ指定なのでなくていいです */
-  background: #000; /* これはテスト用のサイズ指定なのでなくていいです */
   -webkit-transform: translateZ(0); /* 動きを滑らかにするおまじないです。使いすぎ注意。 */
 　display: none;
   opacity: 0px;
@@ -174,95 +236,20 @@ body{
     width: 45px;
     height: 45px;
 	padding: 2px;
-}
-.list{
-  color:white;
-  text-decoration: none;
-}
-.header-area{
-  display: flex;
-  justify-content: space-between;
-  height: 65px;
-  padding: 0 20px;
-  align-items: center;
-}
-.hamburger{
-  width: 40px;
-  height: 25px;
-  position: relative;
-}
-.hamburger span{
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background-color: blue;
-  transition: .5s;/* 追記 */
-}
-.hamburger span:first-of-type{/* ハンバーガーメニューの1番目の線 */
-  top: 0;
-}
-.hamburger span:nth-of-type(2){/* ハンバーガーメニューの2番目の線 */
-  top: 50%;
-}
-.hamburger span:last-of-type{/* ハンバーガーメニューの3番目の線 */
-  top: 100%;
-}
-.slide-menu{
-  background-color: rgba(0, 0, 0, .8);
-  position: fixed;
-  top: 65px;
-  width: 100%;
-  left: 0;
-  transform: translateX(100%);
-  transition: .5s;/* 追記 */
-}
-.slide-menu li{
-  color: #fff;
-  line-height: 400%;
-  text-align: center;
-}
-.hamburger.active span:first-of-type{/* ハンバーガーメニューの1番目の線 */
-  top: 50%;
-  transform: rotate(45deg);
-}
-.hamburger.active span:nth-of-type(2){/* ハンバーガーメニューの2番目の線 */
-  opacity: 0;/* 透明にする */
-}
-.hamburger.active span:last-of-type{/* ハンバーガーメニューの3番目の線 */
-  top: 50%;
-  transform: rotate(-45deg);
-}
-.slide-menu.active{
-  transform: translateX(0);
 }</style>
-        </head>
-        <body>
-            
-
-    
-        <meta charset="utf-8">
+</head>
+<body>            
+        <meta http-equiv="content-type" charset="UTF-8">
         <title>バナナ国王陛下について</title>
     
-    
+<!--コードパクるの禁止!-->
+
 <div class="container d-none" id="show-first">
 <div class="loader_back">
 	<div class="loader gray"></div>
 </div>
 </div>
-		
-  <div class="animateElement">  
-        <h1>バナナ国王陛下とは</h1>
-        <p>バナナ国王陛下とは、<a href="https://nandeyanen.ie-t.net" class="nandeyanen-link">任意団体なんでやねん</a>に雑用係として勤務している中学生です。<br>
-        <img src="https://x.gd/bananakinglogo" class="bananakokuouheika-icon">
-      </p>
-	  <p>最近は、文章をコピーされないようにするプログラムを頑張って作っています。ぜひ見てください。<a href="https://banana-kokuouheika.github.io/copy-and-paste/">開く</a></p>
-  </div>
-  <div class="animateElement">  
-        <h1>任意団体なんでやねんとは</h1>
-        <p></p><a href="https://nandeyanen.ie-t.net" class="nandeyanen-link">任意団体なんでやねん</a>とは、大阪府の小学生4人によって立ち上げられた団体です。現在は小学生4人に加え、<ruby> 元Moon Corporationの社員ら <rp>(</rp><rt>僕は元々Moon Corporationの社員です</rt><rp>)</rp></ruby>と、中学生1名、高校生1名で活動しています。<p></p>
-        <p>任意団体なんでやねんは、<a href="https://nandeyanen.ie-t.net/talkit" class="nandeyanen-link">Talkit</a>という総合SNSサービスや、<a href="https://pagespedia.f5.si" class="nandeyanen-link">Pagespedia</a>という Wikiサイトなどを運営しており、サービスも充実しています。</p>
-</div>
-
+<!--コードパクるの禁止!-->
   <header>
     <div class="header-area">
     <a href="https://liveweave.com/uxbIph/demo"><img src="https://x.gd/bananakinglogo" class="icon"></a>
@@ -281,24 +268,45 @@ body{
       <li><a href="https://liveweave.com/3OiM56/demo" class="list">作成中</a></li>
     </ul>
   </header>
-
+<!--コードパクるの禁止!-->
+<div style="background-color:grey;">
+<h1>お知らせ!</h1>
+<p>無料レン鯖取得しました！！！！！！！！！！！！！</p>
+</div>
+  <div class="animateElement"> 
+        <h1>バナナ国王陛下とは</h1>
+        <p>バナナ国王陛下とは、<a href="https://nandeyanen.ie-t.net" class="nandeyanen-link">任意団体なんでやねん</a>に雑用係として勤務している中学生です。<br>
+  </p></div>
+  <div class="animateElement">  
+        <img src="https://x.gd/bananakinglogo" class="bananakokuouheika-icon">
+  </div>
+<!--コードパクるの禁止!-->
+  <div class="animateElement">  
+        <h1>任意団体なんでやねんとは</h1>
+        <p></p><a href="https://nandeyanen.ie-t.net" class="nandeyanen-link">任意団体なんでやねん</a>とは、大阪府の小学生4人によって立ち上げられた団体です。現在は小学生4人に加え、<ruby> 元Moon Corporationの社員ら <rp>(</rp><rt>僕は元々Moon Corporationの社員です</rt><rp>)</rp></ruby>と、中学生1名、高校生1名で活動しています。<p></p>
+        <p>任意団体なんでやねんは、<a href="https://nandeyanen.ie-t.net/talkit" class="nandeyanen-link">Talkit</a>という総合SNSサービスや、<a href="https://pagespedia.f5.si" class="nandeyanen-link">Pagespedia</a>という Wikiサイトなどを運営しており、サービスも充実しています。</p>
+  </div>
+<!--コードパクるの禁止!-->
+  <div class="animateElement" style="border: 1px solid #ccc; border-radius:2px; font-size: 20px; padding: 3px; background-color: grey;">
+    <a href="https://liveweave.com/vhjRDB/demo">バナナ国王陛下の偉業はこちら</a>
+  </div>
+<!--コードパクるの禁止!-->
+  <div class="animateElement" style="border: 1px solid #ccc; border-radius:2px; font-size: 20px; padding: 3px; background-color: grey;">
+    <a href="https://liveweave.com/KrJ1bE/demo">バナナ国王陛下のアカウント一覧はこちら</a>
+  </div>
+  <div class="animateElement"> 
+    <!---->
+  </div>
+  <div class="animateElement"> 
         <button id="webShareApi">ページを共有</button>
+  </div>
         <a href="mailto:sei1214@ymail.ne.jp" class="mailtolink-bananaking">バナナ国王陛下にメールを送る</a>
         <a href="mailto:info@nandeyanen.ie-t.net" class="mailtolink-nandeyanen">任意団体なんでやねんにメールを送る</a>
-            <script>const showFirst = document.getElementById("show-first");
-function switchDisplay() {
-	  showFirst.classList.add("d-none");
-}
-setTimeout(() => {
-	  switchDisplay();
-	}, 500);
+<!--コードパクるの禁止!-->
 
-document.querySelector('.hamburger').addEventListener('click', function(){
-  this.classList.toggle('active');
-  document.querySelector('.slide-menu').classList.toggle('active');
-})
 
-function OnButtonClick() {
+
+            <script>function OnButtonClick() {
 navigator.share(data)
 }
 
@@ -334,8 +342,25 @@ window.addEventListener("scroll", function () {
       element.classList.add("animated");
     }
   });
-});</script>
-<a　href="/webauth.html">auth</a>
+});
+
+
+
+
+
+var random = Math.random() * 15;
+const showFirst = document.getElementById("show-first");
+function switchDisplay() {
+	  showFirst.classList.add("d-none");
+}
+setTimeout(() => {
+	  switchDisplay();
+	}, random);
+
+document.querySelector('.hamburger').addEventListener('click', function(){
+  this.classList.toggle('active');
+  document.querySelector('.slide-menu').classList.toggle('active');
+})</script>
         
     
 </body>
